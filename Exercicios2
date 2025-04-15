@@ -1,0 +1,21 @@
+# 1 - Média de Notas: Crie um programa que solicite ao usuário que insira as cinco notas
+# de um aluno em diferentes disciplinas. Em seguida, calcule e exiba a média das
+# notas inseridas.
+
+nota1 = float(input("Digite a nota na 1 disciplina: "))
+nota2 = float(input("Digite a nota na 2 disciplina: "))
+nota3 =float(input("Digite a nota na 3 disciplina: "))
+nota4 = float(input("Digite a nota na 4 disciplina: "))
+nota5 = float(input("Digite a nota na 5 disciplina: "))
+
+media = (nota1 + nota2 + nota3 + nota4 + nota5)/5
+print("A média das notas da disciplina é: ",media)
+
+#2 - Programa que pergunte quanto você ganha por hora e o número de horas
+# trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
+
+valor_hora = float(input("Digite quanto recebe por hora: "))
+horas = float(input("Digite quantas horas você trabalha por mês: "))
+
+salario = valor_hora * horas
+print("Seu salário mensal é: ",salario)
