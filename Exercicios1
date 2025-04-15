@@ -1,0 +1,25 @@
+# 1 - Leia um nome pelo teclado e imprima "Olá <nome lido>!"
+
+nome = input("Digite seu nome: ")
+print("Olá ", nome)
+
+# 2 - Leia um numero inteiro pelo teclado e imprima-o
+
+numero_inteiro = int(input("Digite um número inteiro: "))
+print(numero_inteiro)
+# 3 - Leia três números inteiros nos teclado e imprima-os separado por uma barra
+
+um = int(input("Digite o 1 número inteiro: "))
+dois = int(input("Digite o 2 número inteiro: "))
+tres = int(input("Digite o 3 número inteiro: "))
+
+print(um,dois,tres, sep = '/')
+
+# 4 – Leia duas string´s do teclado e imprima essas string´s :
+# lado a lado sem pular linha, separadas por um espaço em branco e na outra linha
+
+frase = input("Digite uma frase: ")
+frase2 = input("Digite a segunda frase: ")
+
+print(frase)
+print(frase2)
