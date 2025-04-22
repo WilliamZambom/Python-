@@ -49,3 +49,34 @@ if operacao == 'x':
 if operacao == '/':
     a = x / y
     print("O resultado é: ", a)
+
+#  4 - Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius.
+# C = 5 * ((F-32) / 9).
+
+F = float(input("Digite a temperatura em Fahrenheit: "))
+C = 5 * ((F - 32) / 9)
+print("A temp em celcius: ", C)
+
+# 5 - Programa que peça 2 números inteiros e um número real. Calcule e mostre:
+# •o produto do dobro do primeiro com metade do segundo .
+# •a soma do triplo do primeiro com o terceiro.
+# •o terceiro elevado ao cubo.
+
+inteiro_1 = int(input("Digite o primeiro numero inteiro: "))
+inteiro_2 = int(input("Digite o segundo numero inteiro: "))
+real = float(input("Digite o numero real: "))
+
+resultado_1 = (inteiro_1 * 2) * (inteiro_2 / 2)
+resultado_2 = (3 * inteiro_1) + (real)
+resultado_3 = (real * real * real)
+
+print("O produto do dobro do primeiro com a metade do segundo: ", resultado_1)
+print("A soma do triplo do primeiro com o terceiro: ", resultado_2)
+print("O terceiro elevado ao cubo: ", resultado_3)    
+
+# 6  - Tendo como dados de entrada a altura de uma pessoa, construa um programa que calcule seu peso ideal, usando a
+#      seguinte fórmula: (72.7*altura) - 58
+
+altura = float(input("Digite sua altura: "))
+peso = (72.7 * altura) - 58
+print("Seu peso ideal é: ",peso)
