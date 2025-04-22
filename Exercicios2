@@ -4,7 +4,7 @@
 
 nota1 = float(input("Digite a nota na 1 disciplina: "))
 nota2 = float(input("Digite a nota na 2 disciplina: "))
-nota3 =float(input("Digite a nota na 3 disciplina: "))
+nota3 = float(input("Digite a nota na 3 disciplina: "))
 nota4 = float(input("Digite a nota na 4 disciplina: "))
 nota5 = float(input("Digite a nota na 5 disciplina: "))
 
@@ -19,3 +19,33 @@ horas = float(input("Digite quantas horas você trabalha por mês: "))
 
 salario = valor_hora * horas
 print("Seu salário mensal é: ",salario)
+
+#3 - Calculadora Simples: Escreva um programa que solicite ao usuário que insira dois números e,
+# em seguida, peça que ele escolha uma operação matemática (adição, subtração, multiplicação ou divisão).
+# O programa deve realizar a operação escolhida e exibir o resultado.
+
+x = int(input("Digite um valor inteiro x: "))
+y = int(input("Digite um valor inteiro y: "))
+print("\n")
+print("Escolha uma operação matemática")
+print("Soma: + ")
+print("Subtração: - ")
+print("Multiplicação: x")
+print("Divisão: /")
+operacao = input("Digite aqui: ")
+
+if operacao == '+':
+    a = x + y
+    print("O resultado é: ", a)
+
+if operacao == '-':
+    a = x - y
+    print("O resultado é: ", a)
+
+if operacao == 'x':
+    a = x * y
+    print("O resultado é: ", a)
+
+if operacao == '/':
+    a = x / y
+    print("O resultado é: ", a)
