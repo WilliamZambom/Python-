@@ -35,4 +35,32 @@ print(f"Percentual de aumento aplicado: {percentual}%")
 print(f"Valor do aumento: R$ {valor_aumento:.2f}")
 print(f"Novo salário após o aumento: R$ {novo_salario:.2f}")
 
+# 3 - Programa que leia um número e exiba o dia correspondente da semana. 
+# (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+
+dia = int(input("Digite um valor (1 à 7): "))
+if dia > 7:
+    print("Valor inválido.")
+
+if dia == 1:
+    print("Domingo: 1")
+
+if dia == 2:
+    print("Segunda: 2")
+
+if dia == 3:
+    print("Terça: 3")
+
+if dia == 4:
+    print("Quarta: 4")
+
+if dia == 5:
+    print("Quinta: 5")
+
+if dia == 6:
+    print("Sexta: 6")
+
+if dia == 7:
+    print("Sabado: 7")
+
 
