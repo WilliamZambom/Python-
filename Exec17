@@ -1,0 +1,94 @@
+#  1 - Programa que imprima a tabuada do 13.
+
+print("13 x 1 = ", 13*1)
+print("13 x 2 = ", 13*2)
+print("13 x 2 = ", 13*3)
+print("13 x 2 = ", 13*4)
+print("13 x 2 = ", 13*5)
+print("13 x 2 = ", 13*6)
+print("13 x 2 = ", 13*7)
+print("13 x 2 = ", 13*8)
+print("13 x 2 = ", 13*9)
+print("13 x 2 = ", 13*10)
+
+# 2 - Programa que leia do teclado uma lista com 15 inteiros e imprima o menor valor.
+
+numeros = []
+
+for i in range(15):
+    numero = int(input(f"Digite o {i+1}º número: "))
+    numeros.append(numero)
+
+menor_valor = min(numeros)
+
+print("O menor valor é:", menor_valor)
+
+# 3 - Programa que leia do teclado uma lista com 5 inteiros e imprima “True” se a lista estiver
+# ordenada de forma crescente ou “False” caso contrário.
+
+numeros = []
+
+for i in range(5):
+    numero = int(input(f"Digite o {i+1}º número: "))
+    numeros.append(numero)
+
+if numeros == sorted(numeros):
+    print("True")
+else:
+    print("False")
+
+# 4 - Programa para imprimir em ordem decrescente todos os números de 500 até 10.
+
+for numero in range(500, 9, -1):
+    print(numero)
+
+# 5 - Programa para ler do teclado 10 números e imprima a quantidade de números entre 10 e 50.  
+contador = 0
+
+for i in range(10):
+    numero = int(input(f"Digite o {i + 1}º número: "))
+
+    if 10 <= numero <= 50:
+        contador += 1
+
+print(f"A quantidade de números entre 10 e 50 é: {contador}")
+
+# 6 - Programa Ler do teclado a idade e o sexo de 10 pessoas, calcule e imprima:
+# 
+# •idade média das mulheres
+# •idade média dos homens
+# •idade média do grupo
+
+soma_idade_mulheres = 0
+soma_idade_homens = 0
+total_mulheres = 0
+total_homens = 0
+soma_idade_total = 0
+
+for i in range(10):
+    idade = int(input(f"Digite a idade da {i + 1}ª pessoa: "))
+    sexo = input("Digite o sexo (M para masculino, F para feminino): ").strip().upper()
+
+    if sexo == 'F':
+        soma_idade_mulheres += idade
+        total_mulheres += 1
+    elif sexo == 'M':
+        soma_idade_homens += idade
+        total_homens += 1
+
+    soma_idade_total += idade
+
+media_idade_mulheres = soma_idade_mulheres / total_mulheres if total_mulheres > 0 else 0
+media_idade_homens = soma_idade_homens / total_homens if total_homens > 0 else 0
+media_idade_total = soma_idade_total / 10
+
+print(f"\nIdade média das mulheres: {media_idade_mulheres:.2f}")
+print(f"Idade média dos homens: {media_idade_homens:.2f}")
+print(f"Idade média do grupo: {media_idade_total:.2f}")
+
+# 7 – Programa que calcule o somatório dos números de 1 a 100 e imprima o resultado.
+
+somatorio = sum(range(1, 101))
+
+print(f"O somatório dos números de 1 a 100 é: {somatorio}")
+
