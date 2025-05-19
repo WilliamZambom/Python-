@@ -1,0 +1,57 @@
+"""
+Programa em Python para:
+
+- ler um número inteiro N;
+
+- ler um conjunto de N strings, contendo os nomes de alunos de uma turma de estudantes, e armazená-las em uma lista
+
+- ler um conjunto de N números inteiros, contendo as respectivas idades dos alunos da turma e armazená-las em outra lista
+
+- Imprimir :
+  o nome e a idade do aluno mais velho
+  o nome e a idade do aluno mais novo
+  a idade média da turma(inteira)
+  os nomes dos alunos que possuem a idade média
+  os nomes dos alunos menores de idade (idade < 18)
+
+ - O programa deverá dar mensagens de erro caso o usuário do programa informe a o número N e valor de idade menor ou igual a zero e pedir para que o usuário volte a informar o número N ou a idade informada erradamente.
+"""
+
+alunos = []
+idades = []
+
+while True:
+  try:
+      qtd = int(input("Quantos alunos deseja cadastrar? "))
+      if qtd > 0:
+          break
+      else:
+          print("O número de alunos deve ser maior que zero.")
+  except ValueError:
+      print("Digite um número inteiro válido.")
+
+for i in range(qtd):
+  nome_aluno = input(f"Digite o nome do aluno {i + 1}: ")
+  alunos.append(nome_aluno)
+
+  while True:
+      try:
+          idade = int(input(f"Digite a idade do aluno {i + 1}: "))
+          if idade > 0:
+              idades.append(idade)
+              break
+          else:
+              print("A idade deve ser maior que zero.")
+      except ValueError:
+          print("Digite uma idade válida (número inteiro).")
+  
+idade_max = max(idades)
+idade_min = min(idades)
+media_idade = sum(idades) // qtd
+
+print(f"Nome: {alunos} idade: {idades} ")
+print("Idade maxima é: ", idade_max)
+print("Idade minima é: ", idade_min)
+print("A média das idades é: ", media_idade)
+
+
