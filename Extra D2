@@ -1,0 +1,54 @@
+""""
+Elaborar um programa em Python para o enunciado abaixo e, após a sua conclusão, copiá-lo para um arquivo Word e fazer o upload para o Blog do Aluno.
+
+Programa em Python para:
+
+- Ler um conjunto de números inteiros positivos;
+
+- Armazene estes números em uma lista;
+
+- Imprima a lista;
+
+- O conjunto desses números acaba quando o usuário tecla o valor 999999, que não deve ser incluído nas instruções a seguir;
+
+- Crie e imprima uma lista em ordem contraria (o primeiro será o último etc.)
+
+- Crie e imprima uma lista com os números pares e outra com os números ímpares;
+
+- O programa deverá dar mensagens de erro caso o usuário do programa informe  o número 999999 como primeiro número;
+
+- O programa deverá  dar uma mensagem de erro caso o usuário do programa informe números inteiros negativos ou iguais a zero.  
+"""
+
+numeros = []
+lista_invertida = []
+i = 0 
+
+while True:
+    num = int(input(f"Digite o {i + 1}º número: "))
+    
+    if num == 999999 and i == 0:
+        print("Erro: primeiro número não pode ser 999999")
+        break
+
+    elif num == 999999:
+        break   
+
+    if num < 0 or num == 0:
+        print("Número negativo.")
+        break
+
+    numeros.append(num)
+    i = i + 1 
+
+for i in range(len(numeros) - 1, -1, -1):
+    lista_invertida.append(numeros[i])
+
+print("Lista: ",numeros)
+print("Lista inversa: ",lista_invertida)
+
+pares = [x for x in numeros if x % 2 == 0]
+impares = [x for x in numeros if x % 2 != 0]
+
+print("Lista de pares:", pares)
+print("Lista de ímpares:", impares)
